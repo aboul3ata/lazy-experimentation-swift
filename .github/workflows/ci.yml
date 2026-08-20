@@ -1,0 +1,11 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  apple:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v6
+      - run: swift test
+      - run: xcodebuild -scheme LazyExperimentation -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build

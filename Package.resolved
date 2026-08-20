@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "growthbook-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/growthbook/growthbook-swift.git",
+      "state" : {
+        "revision" : "1d877190515210a71edfdddfb5a2edce82ada454",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
