@@ -1,9 +1,9 @@
 # Lazy Experimentation for Swift
 
-This Swift Package is a thin initializer around GrowthBook's official Apple SDK. GrowthBook owns feature fetching, caching, targeting, hashing, assignment, and exposure callbacks.
+Lazy Experimentation gives Apple apps local experiment assignment, feature delivery, and outcome capture through Lazy's control plane.
 
 ```swift
-.package(url: "https://github.com/aboul3ata/lazy-experimentation-swift.git", from: "0.1.0")
+.package(url: "https://github.com/aboul3ata/lazy-experimentation-swift.git", from: "0.1.1")
 ```
 
 ```swift
@@ -23,5 +23,3 @@ let enabled = experiments.growthBook.getFeatureValue(
 
 try experiments.capture("onboarding_completed", properties: ["steps": 3])
 ```
-
-Official engine: [`growthbook-swift`](https://github.com/growthbook/growthbook-swift).
