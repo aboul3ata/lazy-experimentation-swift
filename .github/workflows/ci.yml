@@ -19,7 +19,7 @@ jobs:
         key: spm-${{ runner.os }}-${{ steps.toolchain.outputs.version }}-${{ hashFiles('Package.swift', 'Package.resolved') }}
         restore-keys: spm-${{ runner.os }}-${{ steps.toolchain.outputs.version }}-
     - run: swift test
-    timeout-minutes: 6
+    timeout-minutes: ${{ github.event_name == 'pull_request' && 2 || 10 }}
   ios:
     runs-on: macos-15
     steps:
